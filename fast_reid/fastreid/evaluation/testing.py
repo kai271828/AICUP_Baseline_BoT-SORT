@@ -2,7 +2,8 @@
 import logging
 import pprint
 import sys
-from collections import Mapping, OrderedDict
+from collections import OrderedDict
+from collections.abc import Mapping
 
 import numpy as np
 from tabulate import tabulate
@@ -20,7 +21,7 @@ def print_csv_format(results):
     assert isinstance(results, OrderedDict) or not len(results), results
     logger = logging.getLogger(__name__)
 
-    dataset_name = results.pop('dataset')
+    dataset_name = results.pop("dataset")
     metrics = ["Dataset"] + [k for k in results]
     csv_results = [(dataset_name, *list(results.values()))]
 
