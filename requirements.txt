@@ -4,6 +4,7 @@ loguru
 scikit-image
 scikit-learn
 tqdm
+torch==1.13.1+cu117
 torchvision>=0.10.0
 Pillow
 thop
