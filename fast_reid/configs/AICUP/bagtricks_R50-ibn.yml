@@ -29,6 +29,9 @@ SOLVER:
 
   CHECKPOINT_PERIOD: 1
 
+  AMP:
+    ENABLED: False
+
 TEST:
   EVAL_PERIOD: 60 # We didn't provide eval dataset
   IMS_PER_BATCH: 128
