@@ -14,7 +14,3 @@ unzip /content/AICUP_Baseline_BoT-SORT/32_33_train_v2.zip
 
 # prepare ReID dataset
 python fast_reid/datasets/generate_AICUP_patches.py --data_path /content/AICUP_Baseline_BoT-SORT/train
-export FASTREID_DATASETS=/content/AICUP_Baseline_BoT-SORT/fast_reid/datasets
-
-# Train the ReID Module for AICUP
-python3 fast_reid/tools/train_net.py --config-file $1 MODEL.DEVICE "cuda:0"
